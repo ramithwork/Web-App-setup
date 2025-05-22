@@ -1,28 +1,24 @@
-body {
-  -webkit-tap-highlight-color: transparent;
-}
-
 header {
   background-color: #8a2be2;
   text-align: center;
   position: fixed;
   width: 100%;
-  padding-top: constant(safe-area-inset-top); /* Older iOS (pre-11.2) */
-  padding-top: env(safe-area-inset-top, 20px); /* Modern approach with a fallback */
-  /* You can combine it with existing padding if needed */
-  /* padding-top: calc(10px + env(safe-area-inset-top)); */
-}
-
-.sign-in {
-  margin-top: 5.5em;
+  left: 0;
+  top: 0;
+  padding-top: env(safe-area-inset-top, 20px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px)
+  /* min-height: 88px; Use min-height instead of height */
 }
 
 .app-container {
   max-width: 720px;
+  padding-top: calc(160px + env(safe-area-inset-top, 20px));
 }
 
 @media screen and (display-mode: standalone) {
   header {
-    height: 88px !important;
+    /* Optionally adjust min-height if needed */
+    /* min-height: 88px !important; */
   }
 }
