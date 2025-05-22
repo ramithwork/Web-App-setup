@@ -2,6 +2,7 @@
 Make the web app look and feel like a native app.
 
 ## Versioning
+1.0.2 - A working UI is completed. Not tested on a phone with an actual notch but loos good on my iPhone SE. Some important PWA head tags and CSS might be missing but it won't affect my purpose so far. Pico CSS haven't been added.
 1.0.1 - Basics done.
 1.0.0 - Initialisation.
 
