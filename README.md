@@ -1,2 +1,30 @@
 # Web App setup
 Make the web app look and feel like a native app.
+
+## Versioning
+1.0.0 - Initialisation.
+
+## Steps
+1. Add picocss.
+2. In the root folder (where index.html is) create "site.webmanifest" file and add 
+    {
+      "display": "standalone"
+    }
+3. Link to index.html:
+    <link rel="manifest" href="site.webmanifest">
+4. Add Short Name to manifest:
+    "short_name": "Web App"
+5. Icon & Splash Screen
+    Use PWA Asset Generator (https://github.com/elegantapp/pwa-asset-generator)
+    1. $ npm install pwa-asset-generator
+    2. Basic One-off exec:
+        $ npx pwa-asset-generator [source-file] [output-folder]
+    3. Recommended:
+        npx pwa-asset-generator src/assets/setting-svgrepo-com.svg src -m src/site.webmanifest --padding "calc(50vh - 25%) calc(50vw - 25%)" -b "linear-gradeint(135deg, #2fb9e4, #FF0098)" -q 100 -i src/index.html --favicon
+NOTE: pwa-asset-generator didn't work. So instead created a basic manifest. Continuing rest for now and will revist this later.
+NOTE: Look into push notifications on PWA.
+6. 
+
+## Resources:
+- Sam (Main source): https://youtu.be/KzvK809rl3Q
+- Truth about PWA: https://youtu.be/3ODP6tTpjqA

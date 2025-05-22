@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "pwa-asset-generator": "^8.0.5"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
