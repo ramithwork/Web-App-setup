@@ -41,7 +41,11 @@ NOTE: Ideally you wanna understand how PWA's should work with Firebase apps.
         body {
             -webkit-tap-highlight-color: transparent;
         }
-
+12. Add CSS to keep the fixed header below notch:
+        padding-top: constant(safe-area-inset-top); /* Older iOS (pre-11.2) */
+        padding-top: env(safe-area-inset-top, 20px); /* Modern approach with a fallback */
+        /* You can combine it with existing padding if needed */
+        /* padding-top: calc(10px + env(safe-area-inset-top)); */
 
 ## Resources:
 - Sam (Main source): https://youtu.be/KzvK809rl3Q
