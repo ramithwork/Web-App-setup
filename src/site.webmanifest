@@ -2,8 +2,8 @@
   "display": "standalone",
   "short_name": "Web App",
   "start_url": "./",
-  "background_color": "#8a2be2",
-  "theme_color": "#2fb9e4",
+  "background_color": "#4CAF50",
+  "theme_color": "#4CAF50",
   "icons": [
     {
       "src": "./assets/icon-192x192.png",
