@@ -16,6 +16,10 @@ html, body {
     background-color: #f0f2f5;
 }
 
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .app-container {
     display: flex;
     flex-direction: column;
