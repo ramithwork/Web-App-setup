@@ -1,53 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <!-- viewport-fit=cover and user-scalable=no added -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-  <link rel="shortcut icon" href="./assets/icon-192x192.png" type="image/x-icon">
-  <!-- Light/Dark Mode -->
-  <meta name="color-scheme" content="light dark">
-  <!-- Pico CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./css/main.css">
-  <!-- Site Manifest -->
-  <link rel="manifest" href="./site.webmanifest">
-
-  <!-- Recommended for PWA -->
-  <link rel="apple-touch-icon" href="./assets/icon-192x192.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Web App"> 
-  <link rel="icon" href="./assets/icon-192x192.png" type="image/png">
-  <meta property="og:title" content="Web App">
-  <meta property="og:description" content="A short description of your web app.">
-  <meta property="og:image" content="./assets/icon-512x512.png">
-  <meta property="og:url" content="https://www.your-webapp-domain.com">
-  <meta name="twitter:card" content="summary_large_image">
-
-
-  <title>Web App Setup</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sticky Header/Footer SPA/PWA</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header>
-    <h1>Web App</h1>
-  </header>
-  <main class="container app-container">
-    <div class="sign-in">
-      <h3>Sign In</h3>
-      <form action="">
-        <label for="">Email</label>
-        <input type="email" name="" id="">
-        <label for="">Password</label>
-        <input type="password" name="" id="">
-        <button type="submit">Sign In</button>
-      </form>
+    <div class="app-container">
+        <header class="header">
+            <h1>My SPA Header</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <p>This is the main content area. It should be scrollable.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Nunc eu felis ac dolor vestibulum fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vel purus sit amet sapien mattis interdum. Fusce dignissim, magna vel vestibulum euismod, odio nisi tincidunt velit, eu feugiat justo elit a magna.</p>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus at diam vel ex egestas scelerisque. Phasellus in leo ut neque lacinia fermentum. Aliquam erat volutpat. Sed et magna sit amet purus efficitur tincidunt.</p>
+            <p>Suspendisse potenti. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque vel nunc vitae mauris ullamcorper tincidunt. Donec vel felis ut sapien ultrices efficitur.</p>
+            <p>Mauris consectetur, justo nec facilisis consectetur, odio odio suscipit justo, nec feugiat urna odio vel nulla. Sed volutpat, justo ut consectetur scelerisque, sapien libero volutpat justo, nec tristique mauris velit vitae odio.</p>
+            <p>Proin aliquet velit vel turpis tincidunt, sit amet feugiat justo scelerisque. Integer non est nec tortor sollicitudin vestibulum. Vivamus eu quam vel ligula aliquam eleifend. Nam sed libero in justo bibendum fermentum.</p>
+            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc efficitur, sem nec bibendum efficitur, velit libero rhoncus lectus, id tincidunt turpis libero ac enim.</p>
+            <p>Aliquam erat volutpat. Praesent congue mauris a sapien tincidunt, id aliquam sapien vulputate. Donec eget turpis quis leo ullamcorper vulputate. Sed non quam vel ex scelerisque ullamcorper. Nulla facilisi. Sed non lectus ac elit euismod malesuada.</p>
+            <p>This is the end of the main content.</p>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 My SPA. All rights reserved.</p>
+        </footer>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugit aperiam molestias, aliquam veniam modi suscipit doloremque necessitatibus nesciunt autem nulla repellat a, quisquam, dolor molestiae ex provident itaque quae!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugit aperiam molestias, aliquam veniam modi suscipit doloremque necessitatibus nesciunt autem nulla repellat a, quisquam, dolor molestiae ex provident itaque quae!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugit aperiam molestias, aliquam veniam modi suscipit doloremque necessitatibus nesciunt autem nulla repellat a, quisquam, dolor molestiae ex provident itaque quae!</p>
-  </main>
 </body>
-<script type="module" src="index.js"></script>
 </html>
