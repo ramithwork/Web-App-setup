@@ -2,6 +2,7 @@
 Make the web app look and feel like a native app.
 
 ## Versioning
+1.0.1 - Basics done.
 1.0.0 - Initialisation.
 
 ## Steps
@@ -23,7 +24,24 @@ Make the web app look and feel like a native app.
         npx pwa-asset-generator src/assets/setting-svgrepo-com.svg src -m src/site.webmanifest --padding "calc(50vh - 25%) calc(50vw - 25%)" -b "linear-gradeint(135deg, #2fb9e4, #FF0098)" -q 100 -i src/index.html --favicon
 NOTE: pwa-asset-generator didn't work. So instead created a basic manifest. Continuing rest for now and will revist this later.
 NOTE: Look into push notifications on PWA.
-6. 
+6. Check the manifest and index head for minimal code to be able to save to phone Home Screen with icon.
+NOTE: Ideally you wanna understand how PWA's should work with Firebase apps.
+7. Add viewport-fit=cover to (index.html head):
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+8. CSS to push the header down because it will cover the notch:
+    @media screen and (display-mode: standalone) {
+        header {
+            height: 88px !important;
+        }
+    }
+9. You may have to add a margin-top to the element after the header to compensate for step 8.
+10. Add user-scalable=no
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+11. Add CSS to disable element highlighting when tapped/clicked:
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+
 
 ## Resources:
 - Sam (Main source): https://youtu.be/KzvK809rl3Q
