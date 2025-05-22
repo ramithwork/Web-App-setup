@@ -1,96 +1,40 @@
-:root {
-    /* Define CSS variables for safe area insets with fallbacks */
-    --sab-top: env(safe-area-inset-top, 0px);
-    --sab-bottom: env(safe-area-inset-bottom, 0px);
-    --sab-left: env(safe-area-inset-left, 0px);
-    --sab-right: env(safe-area-inset-right, 0px);
+/* Custom CSS for the sticky header */
+header {
+  position: sticky;
+  top: 0;
+  /* Use env() to account for safe areas (notches, etc.) */
+  padding-top: calc(0.5rem + env(safe-area-inset-top, 0px)) !important;
+  padding-bottom: 0.5rem !important;
+  /* padding-bottom: var(--pico-spacing); */
+  /* background-color: var(
+    --pico-background-color
+  ); Ensure background for visibility */
+  background-color: blueviolet;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  box-shadow: var(--pico-box-shadow); /* Optional: add a subtle shadow */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  border: 1px red solid;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%; /* Ensure html and body take full viewport height */
-    overflow: hidden; /* Prevent body scrolling, main-content will scroll */
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f0f2f5;
+/* Optional: adjust header height or padding for different screen sizes if needed */
+@media (min-width: 768px) {
+  header {
+    padding-top: var(
+      --pico-spacing
+    ); /* Less padding on larger screens if desired */
+  }
 }
 
-body {
-  -webkit-tap-highlight-color: transparent;
+main {
+  padding-top: var(
+    --pico-spacing
+  ); /* Add padding to main content to prevent overlap */
 }
 
-.app-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Full viewport height */
-    max-height: -webkit-fill-available; /* Safari fix for 100vh issues with dynamic toolbars */
-    box-sizing: border-box; /* Include padding in element's total width and height */
-}
-
-/* Header Styles */
-.header {
-    position: sticky; /* Make header sticky */
-    top: 0; /* Stick to the top */
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 20px;
-    padding-top: calc(15px + var(--sab-top)); /* Add safe area inset to top padding */
-    padding-left: var(--sab-left); /* Add safe area inset to left padding */
-    padding-right: var(--sab-right); /* Add safe area inset to right padding */
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 100; /* Ensure it's above other content */
-    flex-shrink: 0; /* Prevent header from shrinking */
-}
-
-.header h1 {
-    margin: 0 0 10px 0;
-    font-size: 1.8em;
-}
-
-.header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Main Content Styles */
-.main-content {
-    flex-grow: 1; /* Allow main content to take remaining space */
-    overflow-y: auto; /* Enable vertical scrolling for main content */
-    padding: 20px;
-    padding-left: calc(20px + var(--sab-left)); /* Add safe area inset to left padding */
-    padding-right: calc(20px + var(--sab-right)); /* Add safe area inset to right padding */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-}
-
-.main-content p {
-    margin-bottom: 1em;
-    line-height: 1.6;
-}
-
-/* Footer Styles */
-.footer {
-    position: sticky; /* Make footer sticky */
-    bottom: 0; /* Stick to the bottom */
-    background-color: #333;
-    color: white;
-    padding: 15px 20px;
-    padding-bottom: calc(15px + var(--sab-bottom)); /* Add safe area inset to bottom padding */
-    padding-left: var(--sab-left); /* Add safe area inset to left padding */
-    padding-right: var(--sab-right); /* Add safe area inset to right padding */
-    text-align: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 100; /* Ensure it's above other content */
-    flex-shrink: 0; /* Prevent footer from shrinking */
+section {
+  min-height: 150vh; /* Just for demonstration to enable scrolling */
+  padding: var(--pico-spacing);
+  margin-bottom: var(--pico-spacing);
+  background-color: var(--pico-card-background-color);
+  border-radius: var(--pico-border-radius);
 }
