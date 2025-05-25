@@ -22,28 +22,14 @@ header {
   z-index: 1000; /* Ensure it stays on top of other content */
   box-shadow: var(--pico-box-shadow); /* Optional: add a subtle shadow */
   box-sizing: border-box; /* Include padding in the element's total width and height */
-  border: 1px red solid;
 }
 
-/* Optional: adjust header height or padding for different screen sizes if needed */
-@media (min-width: 768px) {
-  header {
-    padding-top: var(
-      --pico-spacing
-    ); /* Less padding on larger screens if desired */
-  }
-}
-
-main {
-  padding-top: var(
-    --pico-spacing
-  ); /* Add padding to main content to prevent overlap */
-}
-
-section {
-  min-height: 150vh; /* Just for demonstration to enable scrolling */
-  padding: var(--pico-spacing);
-  margin-bottom: var(--pico-spacing);
-  background-color: var(--pico-card-background-color);
-  border-radius: var(--pico-border-radius);
+footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+  background-color: blueviolet;
+  padding-top: calc(0.5rem + env(safe-area-inset-top, 0px)) !important;
+  padding-bottom: 0.5rem !important;
+  text-align: center;
 }
